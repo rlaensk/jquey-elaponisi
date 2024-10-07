@@ -1,0 +1,855 @@
+@import url(/CSS/font.css);
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Julius+Sans+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hubballi&display,family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
+:root {
+  --main-color: #000000;
+  --sub-color: #949494;
+  --border-color: #d1d0d0c4;
+  --scroll-heder-color: #808080;
+  --heder-color: #eeeeee;
+  --logo-font: "Amatic SC";
+  --main-font: "Arsenal SC";
+  --back-color: #f9efe9;
+  --h1-font: "Aclonica", sans-serif;
+  --sub-font: "Hubballi", sans-serif;
+  --p-font: "Karla", sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+body {
+  position: relative;
+}
+#wrap header {
+  width: 100vw;
+  height: 100px;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+#wrap header .hambergerMenu {
+  width: 5%;
+  height: 100%;
+  flex-direction: column;
+  padding: 30px 0;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+#wrap header .hambergerMenu span {
+  display: inline-block;
+  width: 35px;
+  height: 2.2px;
+  background-color: var(--heder-color);
+}
+
+#wrap header nav {
+  width: 95%;
+  height: 100%;
+}
+
+#wrap header nav ul {
+  height: 100%;
+  justify-content: space-between;
+}
+#wrap header nav ul li {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#wrap header nav ul li a {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+#wrap header nav .languageBox {
+  width: 88px;
+}
+#wrap header nav .languageBox div {
+  width: 100%;
+  height: 100%;
+  color: var(--heder-color);
+  justify-content: space-around;
+  align-items: center;
+}
+#wrap header nav .languageBox div img {
+  width: 20px;
+  height: 20px;
+  margin-top: 5px;
+}
+#wrap header nav .logoBox {
+  width: 1420px;
+  margin-left: 25px;
+}
+#wrap header nav .logoBox .logoText {
+  width: auto;
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+
+#wrap header nav .logoBox .logoText a {
+  font-family: var(--logo-font);
+  font-size: 2.3rem;
+  color: var(--heder-color);
+}
+#wrap header nav .logoBox .logoText a:nth-of-type(2) {
+  width: auto;
+  font-size: 0.7rem;
+}
+#wrap header nav .csBox {
+  width: 135px;
+}
+#wrap header nav .csBox div {
+  width: 100%;
+  height: 100%;
+  color: var(--heder-color);
+  justify-content: space-between;
+  align-items: center;
+}
+#wrap header nav .csBox div img {
+  width: 20px;
+  height: 20px;
+  margin-top: 5px;
+}
+#wrap header nav .bookNow {
+  width: 210px;
+  height: 100%;
+}
+#wrap header nav .bookNow a {
+  color: var(--heder-color);
+}
+#wrap main section.mainVisual {
+  width: 100%;
+  height: 94vh;
+}
+#wrap main section.mainVisual video.backgroundVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover; /*비디오가 화면을 꽉채우게끔*/
+  z-index: -1; /*콘텐츠가 비디오 위에 표시되게*/
+}
+#wrap main section.mainVisual .mainSlider {
+  width: 100%;
+  height: 90%;
+}
+#wrap main section.mainVisual .mainVisualText {
+  width: 100%;
+  height: 55vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#wrap main section.mainVisual .mainVisualText:not(.mainVisualTextveiw) {
+  margin-top: 62px;
+}
+#wrap main section.mainVisual .mainVisualText > h1,
+h2 {
+  color: var(--heder-color);
+  font-size: 13rem;
+
+  font-family: var(--logo-font);
+}
+#wrap main section.mainVisual .mainVisualTextveiw {
+  height: 20vh;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-right: 10%;
+  margin-top: 10px;
+}
+.mainVisualTextveiw p a.here {
+  display: inline-block;
+  transform: translateX(0); /* 초기 위치 */
+  transition: transform 0.5s; /* 0.5초 동안 부드럽게 transform 변화 */
+}
+.mainVisualTextveiw a.watch {
+  transition: all 0.5s;
+}
+.mainVisualTextveiw a.watch:hover {
+  transform: scale(1.1);
+  font-weight: bold;
+}
+.mainVisualTextveiw p a.here:hover {
+  transform: translate(3px) scale(1.1);
+
+  color: whitesmoke;
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+#wrap main {
+  width: 100vw;
+  height: auto;
+  margin: 0 auto;
+  max-width: 1650px;
+}
+#wrap main section.mainVisual .mainVisualText p,
+a {
+  color: var(--heder-color);
+}
+#wrap main section.mainVisual .mainVisualText p {
+  width: 500px;
+  height: 125px;
+  font-size: 1rem;
+  line-height: 40px;
+}
+#wrap main section.mainVisual .mainVisualTextveiw > a {
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 1.2rem;
+}
+#wrap main section.poolvilaSection {
+  width: 100%;
+  height: 93vh;
+}
+#wrap main section.poolvilaSection div {
+  width: 40vw;
+  height: 100vh;
+}
+#wrap main section.poolvilaSection .poolvilaSectionText {
+  width: 80%;
+  height: 91%;
+  flex-direction: column;
+  justify-content: space-around;
+
+  padding: 4% 0 0 4%;
+}
+#wrap main section.poolvilaSection .poolvilaSectionText h1 {
+  font-size: 6rem;
+  font-weight: bold;
+}
+#wrap main section.poolvilaSection .poolvilaSectionText p {
+  width: 70%;
+  height: auto;
+  font-size: 1.3rem;
+
+  color: var(--sub-color);
+}
+#wrap main section.poolvilaSection .poolvilaSectionText a {
+  font-size: 1rem;
+  width: 200px;
+  height: 50px;
+  border: 0.8px solid var(--border-color);
+  color: var(--sub-color);
+  align-items: center;
+  justify-content: center;
+  transition: letter-spacing 0.5s;
+  position: relative;
+  letter-spacing: 0;
+  padding: 5px;
+}
+#wrap main section.poolvilaSection .poolvilaSectionText a::before,
+#wrap main section.poolvilaSection .poolvilaSectionText a::after {
+  content: "";
+  position: absolute;
+  bottom: 22px;
+  width: 0;
+  height: 1px;
+  background-color: var(--sub-color);
+  transition: all 0.5s;
+}
+#wrap main section.poolvilaSection .poolvilaSectionText a::before {
+  left: 50%;
+  margin-left: 10px;
+}
+#wrap main section.poolvilaSection .poolvilaSectionText a::after {
+  right: 50%;
+  margin-right: 10px;
+}
+#wrap main section.poolvilaSection .poolvilaSectionText a:hover {
+  letter-spacing: 6px;
+}
+#wrap main section.poolvilaSection .poolvilaSectionText a:hover::before {
+  left: 0;
+  width: 50%;
+}
+#wrap main section.poolvilaSection .poolvilaSectionImg {
+  width: 60vw;
+  position: relative;
+}
+#wrap main section.poolvilaSection .poolvilaSectionText a:hover::after {
+  right: 0;
+  width: 50%;
+}
+#wrap main section.poolvilaSection .poolvilaSectionImg .ImgBackgroundBox {
+  width: 100%;
+  height: 91%;
+  background-color: var(--back-color);
+  position: absolute;
+  top: 9px;
+  align-items: center;
+  justify-content: center;
+}
+#wrap main section.poolvilaSection .poolvilaSectionImg .ImgBackgroundBox img {
+  width: 77%;
+  height: auto;
+}
+#wrap main section.hotelRoomSection {
+  width: 100%;
+  height: 88vh;
+  margin-top: 35px;
+}
+#wrap main section.hotelRoomSection > div {
+  width: 50vw;
+  height: 100%;
+}
+#wrap main section.hotelRoomSection .hotelRoomSectionImgBox {
+  width: 50%;
+  height: auto;
+  margin-left: 50px;
+  padding-top: 50px;
+  flex-direction: column;
+  justify-content: center;
+}
+#wrap main section.hotelRoomSection .hotelRoomSectionImgBox img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+#wrap main section.hotelRoomSection .hotelRoomSectionImgBox .ImgBackgroundBox {
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+}
+#wrap
+  main
+  section.hotelRoomSection
+  .hotelRoomSectionImgBox
+  .ImgBackgroundBox
+  img {
+  transition: all 1s;
+}
+#wrap main section.hotelRoomSection .hotelRoomSectionImgBox .hotelRoomsubBox {
+  width: 90%;
+  height: auto;
+  justify-content: center;
+}
+#wrap main section.hotelRoomSection .hotelRoomImgSub {
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+#wrap main section.hotelRoomSection .hotelRoomImgSub .subRoomImb {
+  justify-content: center;
+  align-items: center;
+  width: 23%;
+  height: 135px;
+  position: relative;
+  margin-top: 30px;
+  transition: transform 0.5s;
+  overflow: hidden;
+}
+#wrap main section.hotelRoomSection .hotelRoomImgSub .subRoomImb img {
+  width: 100%;
+  height: auto;
+  transition: transform 1s;
+  cursor: pointer;
+}
+#wrap main section.hotelRoomSection .hotelRoomImgSub .subRoomImb::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 77%;
+  background-color: rgb(213 213 213 / 36%);
+}
+#wrap main section.hotelRoomSection .hotelRoomImgSub .subRoomImb:hover img {
+  transform: scale(1.1);
+}
+#wrap main section.hotelRoomSection .hotelRoomSectionText {
+  width: 50%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#wrap main section.hotelRoomSection .hotelRoomSectionText h1 {
+  font-size: 7rem;
+  font-weight: bold;
+  text-align: center;
+}
+#wrap main section.hotelRoomSection .hotelRoomSectionText .roomInfoBox {
+  width: 70%;
+  height: 430px;
+  background: var(--back-color);
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5% 0;
+}
+#wrap main section.hotelRoomSection .hotelRoomSectionText .roomInfoBox > h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  font-family: var(--p-font);
+  color: var(--main-color);
+  transition: all 1s;
+}
+#wrap main section.hotelRoomSection .hotelRoomSectionText .roomInfoBox > p {
+  width: 65%;
+  height: auto;
+  font-weight: 200;
+  margin-left: 60px;
+  transition: all 1s;
+}
+#wrap main section.hotelRoomSection .hotelRoomSectionText .roomInfoBox > a {
+  width: 200px;
+  height: 50px;
+  font-size: 1rem;
+  border: 0.5px solid var(--border-color);
+  color: var(--sub-color);
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+  position: relative;
+}
+#wrap
+  main
+  section.hotelRoomSection
+  .hotelRoomSectionText
+  .roomInfoBox
+  > a::before,
+#wrap
+  main
+  section.hotelRoomSection
+  .hotelRoomSectionText
+  .roomInfoBox
+  > a::after {
+  content: "";
+  position: absolute;
+  bottom: 22px;
+  width: 0;
+  height: 1px;
+  background-color: var(--sub-color);
+  transition: all 0.5s;
+}
+#wrap
+  main
+  section.hotelRoomSection
+  .hotelRoomSectionText
+  .roomInfoBox
+  > a::before {
+  left: 50%;
+  margin-left: 10px;
+}
+#wrap
+  main
+  section.hotelRoomSection
+  .hotelRoomSectionText
+  .roomInfoBox
+  > a::after {
+  right: 50%;
+  margin-right: 10px;
+}
+#wrap
+  main
+  section.hotelRoomSection
+  .hotelRoomSectionText
+  .roomInfoBox
+  > a:hover {
+  letter-spacing: 6px;
+}
+#wrap
+  main
+  section.hotelRoomSection
+  .hotelRoomSectionText
+  .roomInfoBox
+  > a:hover::before {
+  left: 0;
+  width: 50%;
+}
+#wrap
+  main
+  section.hotelRoomSection
+  .hotelRoomSectionText
+  .roomInfoBox
+  > a:hover::after {
+  right: 0;
+  width: 50%;
+}
+main .sectionImg {
+  width: 100vw;
+  height: 550px;
+
+  position: relative;
+  left: -8%;
+  padding: 3% 0;
+}
+main .sectionImg img {
+  display: inline-block;
+  width: 100%;
+  height: 450px;
+
+  position: absolute;
+  left: 0;
+}
+.facilitySection {
+  width: 100%;
+  height: 88vh;
+}
+.facilitySection > div {
+  width: 50%;
+}
+.facilityImgBox > div h3 {
+  font-family: var(--p-font);
+  font-size: 1.7rem;
+  margin-top: 1%;
+}
+.facilitySection .facilityTextBox {
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 6% 0 0 4%;
+}
+.facilitySection .facilityTextBox h1 {
+  font-size: 8rem;
+}
+main section.facilitySection .facilityTextBox p {
+  width: 69%;
+  height: auto;
+}
+main section.facilitySection .facilityTextBox .facilityBtnBox {
+  width: 50%;
+  height: 150px;
+  flex-direction: column;
+  justify-content: space-around;
+}
+main section.facilitySection .facilityTextBox .facilityBtnBox a {
+  width: 400px;
+  height: 50px;
+  font-size: 1rem;
+  color: var(--sub-color);
+  align-items: center;
+  justify-content: center;
+  border: 0.3px solid var(--border-color);
+  position: relative;
+  transition: all 0.5s;
+}
+
+main section.facilitySection .facilityTextBox .facilityBtnBox a::before,
+main section.facilitySection .facilityTextBox .facilityBtnBox a::after {
+  content: "";
+  position: absolute;
+  bottom: 22px;
+  width: 0;
+  height: 1px;
+  background-color: var(--sub-color);
+  transition: all 0.5s;
+}
+main section.facilitySection .facilityTextBox .facilityBtnBox a::before {
+  left: 50%;
+  margin-left: 10px;
+}
+main section.facilitySection .facilityTextBox .facilityBtnBox a::after {
+  right: 50%;
+  margin-right: 10px;
+}
+main section.facilitySection .facilityTextBox .facilityBtnBox a:hover {
+  letter-spacing: 3px;
+}
+main section.facilitySection .facilityTextBox .facilityBtnBox a:hover::before {
+  left: 0;
+  width: 50%;
+}
+main section.facilitySection .facilityTextBox .facilityBtnBox a:hover::after {
+  right: 0;
+  width: 50%;
+}
+
+.facilitySection .facilityImgBox {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2% 0;
+}
+.facilitySection .facilityImgBox > div {
+  width: 100%;
+  height: 45%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.facilitySection .facilityImgBox > div > img {
+  width: 85%;
+  height: 300px;
+}
+main section.reviewsSection {
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  padding: 5% 0;
+}
+main section.reviewsSection .reviewsTextBox {
+  justify-content: flex-end;
+}
+main section.reviewsSection .reviewsTextBox h1 {
+  width: 34%;
+  font-size: clamp(20px, 1rem + 6vw, 7rem);
+}
+main section.reviewsSection .reviewsImgBox {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+main .reviewsSection .reviewImgSubBox {
+  width: auto;
+  height: 400px;
+}
+main .reviewsSection .reviewImgSubBox .reviewImgSub {
+  width: 392px;
+  height: 400px;
+  margin: 10px;
+}
+main .reviewsSection .reviewImgSubBox .reviewImgSub img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+main .reviewsSection .reviewArrow {
+  width: 100%;
+}
+main .reviewsSection .reviewArrow .reviewArrowLeft,
+.reviewArrowRight {
+  width: 50px;
+  height: 50px;
+
+  position: absolute;
+  bottom: 10%;
+}
+main .reviewsSection .reviewArrow .reviewArrowLeft {
+  background: url(../img/arrow-LE.png) center/50px no-repeat;
+  left: -6%;
+  bottom: 44%;
+}
+main .reviewsSection .reviewArrow .reviewArrowRight {
+  background: url(../img/arrow-RE.png) center/50px no-repeat;
+  right: -6%;
+  bottom: 44%;
+}
+
+main .reviewsSection a {
+  font-size: clamp(20px, 1rem + 4vw, 1rem);
+  color: var(--sub-color);
+  border: 0.3px solid var(--border-color);
+  font-family: var(--main-font);
+  width: 370px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+  position: relative;
+  transition: all 0.5s;
+}
+main .reviewsSection a::before,
+main .reviewsSection a::after {
+  content: "";
+  position: absolute;
+  bottom: 22px;
+  width: 0;
+  height: 1px;
+  background-color: var(--sub-color);
+  transition: all 0.5s;
+}
+main .reviewsSection a::before {
+  left: 50%;
+  margin-left: 10px;
+}
+main .reviewsSection a::after {
+  right: 50%;
+  margin-right: 10px;
+}
+main .reviewsSection a:hover {
+  letter-spacing: 3px;
+}
+main .reviewsSection a:hover::before {
+  left: 0;
+  width: 50%;
+}
+main .reviewsSection a:hover::after {
+  right: 0;
+  width: 50%;
+}
+main .specialOffersSection {
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+  padding: 5% 0;
+  flex-direction: column;
+  justify-content: space-around;
+}
+main .specialOffersSection h1 {
+  font-size: clamp(20px, 1rem + 6vw, 7rem);
+}
+
+main .specialOffersSection .specialOfferBoxs {
+  width: 646%;
+  height: auto;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding-left: 10px;
+}
+main .specialOffersSection .specialOfferBox {
+  width: 15%;
+  height: 400px;
+
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2%;
+  position: relative;
+}
+main .specialOffersSection .specialOfferBox::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 32%;
+  height: 100%;
+  background-color: var(--back-color);
+  right: 200px;
+  z-index: -1;
+}
+main .specialOffersSection .specialOfferBox .specialOfferImgBox {
+  width: 50%;
+  height: 300px;
+}
+main .specialOffersSection .specialOfferBox .specialOfferImgBox img {
+  width: 85%;
+  height: 100%;
+}
+main .specialOffersSection .specialOfferBox .specialOfferTextBox {
+  width: 50%;
+  height: 25%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 4%;
+}
+
+main .specialOffersSection .specialOfferBox .specialOfferTextBox h2 {
+  font-size: 2rem;
+  font-family: var(--main-font);
+  color: var(--main-color);
+  font-weight: bold;
+  width: 60%;
+}
+main .specialOffersSection .specialOfferBox .specialOfferTextBox p {
+  width: 63%;
+  height: auto;
+  color: var(--sub-color);
+  margin-top: 10px;
+}
+main .specialOffersSection a {
+  width: 200px;
+  height: 50px;
+  font-size: 1rem;
+  align-items: center;
+  justify-content: center;
+  border: 0.3px solid var(--border-color);
+  align-self: flex-end;
+  color: var(--sub-color);
+  position: relative;
+  transition: all 0.5s;
+}
+
+main .specialOffersSection a::before,
+main .specialOffersSection a::after {
+  content: "";
+  position: absolute;
+  bottom: 22px;
+  width: 0;
+  height: 1px;
+  background-color: var(--sub-color);
+  transition: all 0.5s;
+}
+main .specialOffersSection a::before {
+  left: 50%;
+  margin-left: 10px;
+}
+main .specialOffersSection a::after {
+  right: 50%;
+  margin-right: 10px;
+}
+main .specialOffersSection a:hover {
+  letter-spacing: 3px;
+}
+main .specialOffersSection a:hover::before {
+  left: 0;
+  width: 50%;
+}
+main .specialOffersSection a:hover::after {
+  right: 0;
+  width: 50%;
+}
+
+main .emailSection {
+  width: 100%;
+  height: 90vh;
+  justify-content: space-around;
+  padding: 5% 0;
+}
+main .emailSection > div {
+  width: 45%;
+  height: 100%;
+}
+main .emailSection .emailTextBox {
+  width: 45%;
+  height: 50%;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+main .emailSection .emailTextBox h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: right;
+}
+main .emailSection .emailTextBox p {
+  width: 50%;
+  height: auto;
+}
+main .emailSection .emailInputBox {
+  width: 40%;
+  height: 68%;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 13%;
+}
+main .emailSection .emailInputBox form {
+  flex-direction: column;
+  justify-content: space-around;
+  width: 90%;
+  height: 20%;
+}
+main .emailSection .emailInputBox form input {
+  width: 100%;
+  height: 40px;
+
+  border: none;
+  border-bottom: 0.3px solid var(--border-color);
+  padding: 5px;
+}
+main .emailSection .emailInputBox form input:focus {
+  outline: none;
+}
+.emailInputBox form .form-group {
+  width: 100%;
+  margin-top: 1%;
+}
+.emailInputBox button {
+  width: 180px;
+  height: 50px;
+  border: none;
+  letter-spacing: 3px;
+}
